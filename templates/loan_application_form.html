@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Loan prediction</title>
+    <!-- <link rel = "icon" href = "{{url_for('static', filename='favicon.png')}}" 
+        type = "image/x-icon">  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/static/css/style.css">   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="container" align="center" style="border=2px">
+        <h1 class="bg-primary">Loan approval Prediction Form </h1>
+        <p class="bg-success">It's a very important process for banking organizations. The system approves or rejects the
+            loan applications.</p>
+
+        <br>
+
+
+        <form class="frm" action="{{ url_for('prediction')}}" method="post" id="loan_predict">
+            <label for="Gender">Gender :</label>
+            <select id="Gender" name="Gender" required>
+                <option value="" selected disabled hidden> Select </option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+            <br><br>
+
+            <label for="Married">Married :</label>
+            <select id="Married" name="Married" required>
+                <option value="" selected disabled hidden>Select </option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br> <br>
+
+            <label for="depen">Dependents :</label>
+            <select id="depen" name="depen" required>
+                <option value="" selected disabled hidden> Select </option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+            </select>
+            <br><br>
+
+            <label for="Education">Education : </label>
+            <select id="Education" name="Education" required>
+                <option value="" selected disabled hidden>Select </option>
+                <option value="0">Graduate</option>
+                <option value="1">Not Graduate</option>
+            </select>
+            <br><br>
+
+            <label for="empl">Self Employed :</label>
+            <select id="empl" name="empl" required>
+                <option value="" selected disabled hidden> Select </option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br><br>
+
+            <label for="credit">Credit History :</label>
+            <select id="credit" name="credit" required>
+                <option value="" selected disabled hidden>Select </option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br><br>
+
+            <label for="Property">Property Area :</label>
+            <select id="Property" name="Property" required>
+                <option value="" selected disabled hidden> Select </option>
+                <option value="1">Rural</option>
+                <option value="2">Semi- Urban</option>
+                <option value="0">Urban</option>
+            </select>
+            <br><br>
+
+            <label for="Income">Income :</label>
+            <select id="Income" name="Income" required>
+                <option value="" selected disabled hidden> Select </option>
+                <option value="1">low</option>
+                <option value="2">Medium</option>
+                <option value="0">High</option>
+            </select>
+            <br><br>
+
+
+            <br>
+            <!-- <button id="predict_button" type="submit"> Predict </button> -->
+            <button id="login-button" class="button" style="vertical-align:middle"><span>Predict </span></button>
+        </form>
+
+        
+
+    </div>
+
+
+
+</body>
+
+</html>
